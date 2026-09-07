@@ -144,6 +144,20 @@
     requestAnimationFrame(tick);
   }
 
+  /* ---------- WhatsApp button ---------- */
+  const wa = document.querySelector(".wa-fab");
+  if (wa) {
+    const number = (wa.dataset.number || "").replace(/\D/g, "");
+    if (number) {
+      wa.href = "https://wa.me/" + number + "?text=" + encodeURIComponent("Hello Naath Industries, I have an enquiry.");
+      wa.target = "_blank";
+      wa.rel = "noopener";
+    } else {
+      wa.addEventListener("click", (e) => e.preventDefault());
+      wa.title = "WhatsApp number coming soon";
+    }
+  }
+
   /* ---------- Enquiry form (mailto handoff) ---------- */
   const form = document.getElementById("enquiryForm");
   if (form) {

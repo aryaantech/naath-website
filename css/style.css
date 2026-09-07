@@ -287,9 +287,21 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
   transition: opacity 1.4s ease, transform 7s linear;
 }
 .scene.active { opacity: 1; transform: scale(1); }
-.scene-1 { background: radial-gradient(120% 90% at 15% 20%, #14532d 0%, #0b3d2e 45%, #06251b 100%); }
-.scene-2 { background: radial-gradient(120% 90% at 85% 15%, #1a5c46 0%, #0c4434 50%, #06251b 100%); }
-.scene-3 { background: radial-gradient(120% 100% at 50% 110%, #17624a 0%, #0b3d2e 55%, #05201a 100%); }
+.scene-1 {
+  background:
+    linear-gradient(rgba(6, 37, 27, 0.78), rgba(6, 37, 27, 0.88)),
+    url("../images/hero-1.jpg") center / cover no-repeat;
+}
+.scene-2 {
+  background:
+    linear-gradient(rgba(6, 37, 27, 0.74), rgba(6, 37, 27, 0.86)),
+    url("../images/hero-2.jpg") center / cover no-repeat;
+}
+.scene-3 {
+  background:
+    linear-gradient(rgba(5, 32, 26, 0.74), rgba(5, 32, 26, 0.86)),
+    url("../images/hero-3.jpg") center / cover no-repeat;
+}
 
 /* animated texture: drifting threads */
 .hero::before {
@@ -388,7 +400,7 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
 .rotator {
   display: inline-block;
   position: relative;
-  min-width: 9ch;
+  min-width: 11ch;
   text-align: left;
 }
 .rotator span {
@@ -888,6 +900,15 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
   position: relative;
 }
 .split-visual svg { width: 100%; height: auto; }
+.split-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+.split-visual:hover img { transform: scale(1.04); }
 
 .check-list { display: grid; gap: 14px; margin-top: 28px; }
 .check-list li {
@@ -1066,6 +1087,55 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
   font-size: 0.85rem;
   opacity: 0.7;
 }
+
+/* ============================================================
+   WhatsApp floating button
+   ============================================================ */
+.wa-fab {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px 14px 16px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 12px 30px -6px rgba(37, 211, 102, 0.55);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s;
+}
+.wa-fab:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 18px 40px -6px rgba(37, 211, 102, 0.6); }
+.wa-fab svg { width: 26px; height: 26px; flex: none; }
+@media (max-width: 640px) {
+  .wa-fab span { display: none; }
+  .wa-fab { padding: 15px; }
+}
+
+/* Photo blocks */
+.photo-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+.photo-frame:hover img { transform: scale(1.04); }
+.product-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+.product-card:hover .product-art img { transform: scale(1.06); }
 
 /* ============================================================
    Utility / misc
