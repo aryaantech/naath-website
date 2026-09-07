@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naath Industries Pvt. Ltd. — Recycled Textiles, Raw Wool &amp; Synthetic Fibre Waste</title>
+  <meta name="description" content="Naath Industries Pvt. Ltd., established 1982 — one of the leading indentors in India representing reputed global suppliers of recycled textiles, raw wool & wool wastes, and synthetic fibre wastes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====== NAV ====== -->
+  <header class="nav on-dark">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12.017 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg>
+        </span>
+        <span>Naath<small>Industries Pvt. Ltd.</small></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="profile.html">Our Profile</a>
+        <a href="textile-recycling.html">Textile Recycling</a>
+        <a href="raw-wool.html">Raw Wool</a>
+        <a href="synthetic-fibre.html">Synthetic Fibres</a>
+        <a href="contact.html">Contact</a>
+        <a href="enquiry.html" class="nav-cta">Make an Enquiry</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <div class="hero-scenes">
+      <div class="scene scene-1 active"></div>
+      <div class="scene scene-2"></div>
+      <div class="scene scene-3"></div>
+    </div>
+    <canvas id="leafCanvas"></canvas>
+
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-badge"><span class="pulse-dot"></span> Established 1982 &middot; Trusted Global Indenting House</div>
+        <h1>
+          Giving <span class="rotator"><span class="show">textiles</span><span>raw wool</span><span>fibres</span></span><br />
+          a <span class="accent">second life<svg viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M4 14 C 80 4, 220 4, 296 12" /></svg></span>
+          for a greener planet.
+        </h1>
+        <p class="hero-sub">
+          Naath Industries Pvt. Ltd. is one of the leading indentors in India, representing
+          reputed suppliers from all over the globe in recycled textiles, raw wool &amp; wool
+          wastes, and synthetic fibre wastes.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="enquiry.html">Make an Enquiry
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="profile.html">Our Story</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num"><span data-count="44">0</span><sup>+</sup></div><div class="lbl">Years in trade</div></div>
+          <div class="hero-stat"><div class="num"><span data-count="3">0</span></div><div class="lbl">Product verticals</div></div>
+          <div class="hero-stat"><div class="num">Global</div><div class="lbl">Supplier network</div></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit-wrap">
+          <div class="orbit-ring"></div>
+          <div class="orbit-ring inner"></div>
+          <div class="orbit-core">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12.017 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg>
+          </div>
+          <div class="orbit-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+            <span class="node-lbl">Used Clothes</span>
+          </div>
+          <div class="orbit-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3c-2.5 2.5-2.5 15.5 0 18M12 3c2.5 2.5 2.5 15.5 0 18M3.5 9h17M3.5 15h17"/></svg>
+            <span class="node-lbl">Raw Wool</span>
+          </div>
+          <div class="orbit-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c4-1 6-3 7-7 1 4 3 6 7 7"/><path d="M12 13V4"/><path d="M8 6l4-3 4 3"/></svg>
+            <span class="node-lbl">Synthetic Fibres</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint"><div class="wheel"></div>Scroll</div>
+  </section>
+
+  <!-- ====== MARQUEE ====== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack">
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Recycled Textiles</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Raw Wool &amp; Wool Wastes</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Synthetic Fibre Wastes</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Acrylic Wastes</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Personalised Service</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Efficiency &amp; Integrity</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Since 1982</span>
+    </div>
+  </div>
+
+  <!-- ====== CIRCULAR ECONOMY ====== -->
+  <section class="section-cycle">
+    <div class="container cycle-grid">
+      <div class="reveal">
+        <div class="eyebrow">The Circular Economy</div>
+        <h2 class="section-title">Nothing wasted. Everything renewed.</h2>
+        <p class="section-lead">
+          We connect global suppliers of recovered materials with the mills and manufacturers
+          who transform them — closing the loop between waste and worth, and keeping valuable
+          fibres in circulation instead of landfills.
+        </p>
+        <div class="cycle-steps" style="margin-top: 36px;">
+          <div class="cycle-step reveal reveal-d1">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg></div>
+            <div><h3>Collect</h3><p>Used clothing and material wastes are recovered by reputed suppliers across the globe.</p></div>
+          </div>
+          <div class="cycle-step reveal reveal-d2">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12.017 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg></div>
+            <div><h3>Connect</h3><p>We indent the right material to the right buyer — with utmost efficiency and integrity.</p></div>
+          </div>
+          <div class="cycle-step reveal reveal-d3">
+            <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+            <div><h3>Renew</h3><p>Recovered fibres re-enter production as yarns, blankets and fabrics — a greener planet, one bale at a time.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cycle-svg-wrap reveal reveal-d1">
+        <svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Circular economy diagram">
+          <defs>
+            <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#0b3d2e"/>
+            </linearGradient>
+          </defs>
+          <circle cx="260" cy="260" r="205" fill="none" stroke="#0b3d2e" stroke-opacity="0.08" stroke-width="46"/>
+          <circle class="flow-path" cx="260" cy="260" r="205"/>
+          <g>
+            <circle cx="260" cy="55" r="46" fill="url(#cg)"/>
+            <text x="260" y="61" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Inter, sans-serif">USE</text>
+          </g>
+          <g>
+            <circle cx="438" cy="362" r="46" fill="url(#cg)"/>
+            <text x="438" y="368" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Inter, sans-serif">RECOVER</text>
+          </g>
+          <g>
+            <circle cx="82" cy="362" r="46" fill="url(#cg)"/>
+            <text x="82" y="368" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Inter, sans-serif">REMAKE</text>
+          </g>
+          <g transform="translate(260 260)">
+            <circle r="86" fill="#faf7f0" stroke="#10b981" stroke-opacity="0.35" stroke-width="1.5"/>
+            <text y="-8" text-anchor="middle" font-family="Fraunces, serif" font-size="26" font-weight="700" fill="#0b3d2e">Naath</text>
+            <text y="18" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" letter-spacing="2" fill="#1a7a4f">SINCE 1982</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRODUCTS ====== -->
+  <section class="section-products" id="products">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="eyebrow" style="justify-content:center;">What We Trade</div>
+        <h2 class="section-title">Three verticals. One purpose.</h2>
+        <p class="section-lead mx-auto">
+          Representing many reputed suppliers from all over the globe across three specialised
+          material categories.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <a class="product-card reveal reveal-d1" href="textile-recycling.html">
+          <div class="product-art">
+            <svg class="art" viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="210" fill="#0b3d2e"/>
+              <g opacity="0.5">
+                <path d="M-20 160 Q 100 90 220 150 T 460 130" stroke="#10b981" stroke-width="26" fill="none" stroke-linecap="round"/>
+                <path d="M-20 190 Q 120 130 240 180 T 460 160" stroke="#d4a94e" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.7"/>
+              </g>
+              <g transform="translate(155 40)" fill="none" stroke="#d1fae5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M62 8 45 0a17 17 0 0 1-34 0L-6 8a8 8 0 0 0-5 9l2 14a4 4 0 0 0 4 3h9v42a8 8 0 0 0 8 8h32a8 8 0 0 0 8-8V34h9a4 4 0 0 0 4-3l2-14a8 8 0 0 0-5-9Z" transform="translate(17 30)"/>
+              </g>
+            </svg>
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Recycled Textiles</span>
+            <h3>Used Clothes for Textile Recycling</h3>
+            <p>Recovered garments and mixed rags sourced from reputed global suppliers — the raw material of the textile recycling industry.</p>
+            <span class="product-link">Explore
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="product-card reveal reveal-d2" href="raw-wool.html">
+          <div class="product-art">
+            <svg class="art" viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="210" fill="#14532d"/>
+              <g fill="none" stroke="#d1fae5" stroke-width="5" stroke-linecap="round" opacity="0.9">
+                <circle cx="200" cy="105" r="52"/>
+                <path d="M200 53c-24 24-24 80 0 104M200 53c24 24 24 80 0 104M151 88h98M151 122h98"/>
+              </g>
+              <g stroke="#d4a94e" stroke-width="10" stroke-linecap="round" opacity="0.55" fill="none">
+                <path d="M-10 40 Q 90 10 200 40 T 410 30"/>
+                <path d="M-10 180 Q 110 200 220 175 T 410 185"/>
+              </g>
+            </svg>
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Natural Fibre</span>
+            <h3>Raw Wool &amp; Wool Wastes</h3>
+            <p>Greasy and scoured wools plus wool wastes from trusted origins worldwide, indented for spinners and woollen mills across India.</p>
+            <span class="product-link">Explore
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="product-card reveal reveal-d3" href="synthetic-fibre.html">
+          <div class="product-art">
+            <svg class="art" viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="210" fill="#06251b"/>
+              <g stroke="#34d399" stroke-width="3" fill="none" opacity="0.8">
+                <path d="M40 210 C 80 120, 120 120, 160 210"/>
+                <path d="M100 210 C 145 90, 185 90, 230 210"/>
+                <path d="M170 210 C 215 60, 255 60, 300 210"/>
+                <path d="M240 210 C 280 100, 320 100, 360 210"/>
+              </g>
+              <g fill="#d4a94e" opacity="0.85">
+                <circle cx="160" cy="70" r="5"/><circle cx="230" cy="45" r="4"/><circle cx="300" cy="80" r="5"/><circle cx="90" cy="100" r="4"/>
+              </g>
+            </svg>
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Synthetic Fibre</span>
+            <h3>Synthetic Fibre Wastes</h3>
+            <p>Acrylic and other synthetic fibre wastes for regeneration into new yarns — dependable quality, competitive global sourcing.</p>
+            <span class="product-link">Explore
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== IMPACT ====== -->
+  <section class="section-impact">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow" style="color:var(--green-400);">Greater Good</div>
+        <h2 class="section-title">Trade that treads lightly on the planet.</h2>
+        <p class="section-lead">
+          Every bale of recovered textile, wool or fibre that re-enters production is material
+          that never becomes landfill — and virgin resource that never needs to be extracted.
+        </p>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></div>
+          <div class="num"><span data-count="1982">0</span></div>
+          <div class="lbl">Established — four decades of steady growth</div>
+        </div>
+        <div class="impact-card reveal reveal-d1">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg></div>
+          <div class="num"><span>Global</span></div>
+          <div class="lbl">Reputed suppliers represented from all over the world</div>
+        </div>
+        <div class="impact-card reveal reveal-d2">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+          <div class="num"><span data-count="3">0</span></div>
+          <div class="lbl">Circular material verticals keeping fibres in use</div>
+        </div>
+        <div class="impact-card reveal reveal-d3">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17a5 5 0 0 1-5 5H2v-4a5 5 0 0 1 5-5"/><path d="M13 7a5 5 0 0 1 5-5h4v4a5 5 0 0 1-5 5"/><path d="M13 17a5 5 0 0 0 5 5h4v-4a5 5 0 0 0-5-5"/><path d="M11 7a5 5 0 0 0-5-5H2v4a5 5 0 0 0 5 5"/></svg></div>
+          <div class="num"><span>100<span class="suffix">%</span></span></div>
+          <div class="lbl">Personalised service to buyers &amp; suppliers alike</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== LEGACY ====== -->
+  <section>
+    <div class="container legacy-grid">
+      <div class="legacy-visual">
+        <div class="legacy-year" aria-hidden="true">1982<span class="fill">1982</span></div>
+        <div class="legacy-since">The year it all began</div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Our Profile</div>
+        <h2 class="section-title">Built on efficiency. Bound by integrity.</h2>
+        <p class="section-lead">
+          Established in 1982, Naath Industries Pvt. Ltd. is an indenting house whose growth
+          has been steady over many years of operations — thanks to personalised service to
+          its buyers &amp; suppliers, delivered with utmost efficiency and integrity.
+        </p>
+        <div class="value-chips">
+          <span class="value-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Personalised Service</span>
+          <span class="value-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Utmost Efficiency</span>
+          <span class="value-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Integrity First</span>
+          <span class="value-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Global Reach</span>
+        </div>
+        <div style="margin-top: 36px;">
+          <a class="btn btn-dark" href="profile.html">Read Our Full Profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA ====== -->
+  <section class="section-cta">
+    <div class="container">
+      <div class="cta-band reveal">
+        <svg class="recycle-bg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12.017 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg>
+        <h2>Let's close the loop, together.</h2>
+        <p>Looking to source recycled textiles, raw wool or synthetic fibre wastes? Tell us what you need and our team will connect you with the right supplier.</p>
+        <a class="btn btn-primary" href="enquiry.html">Start an Enquiry
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/><path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/><path d="m14 16-3 3 3 3"/><path d="M8.293 13.596 7.196 9.5 3.1 10.598"/><path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 12.017 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/><path d="m13.378 9.633 4.096 1.098 1.097-4.096"/></svg>
+            </span>
+            <span>Naath<small>Industries Pvt. Ltd.</small></span>
+          </a>
+          <p>One of the leading indentors in India, representing many reputed suppliers from all over the globe. Established 1982.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="profile.html">Our Profile</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="enquiry.html">Enquiry</a>
+          </div>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <div class="footer-links">
+            <a href="textile-recycling.html">Used Clothes for Recycling</a>
+            <a href="raw-wool.html">Raw Wool &amp; Wool Wastes</a>
+            <a href="synthetic-fibre.html">Synthetic Fibre Wastes</a>
+          </div>
+        </div>
+        <div>
+          <h4>Our Promise</h4>
+          <div class="footer-links">
+            <span>Personalised Service</span>
+            <span>Utmost Efficiency</span>
+            <span>Integrity, Always</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Naath Industries Pvt. Ltd. All rights reserved.</span>
+        <span>Recycling materials. Renewing the planet.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
