@@ -27,7 +27,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Cinzel:wght@500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -65,13 +65,12 @@
       <div class="scene scene-2"></div>
       <div class="scene scene-3"></div>
     </div>
-    <canvas id="leafCanvas"></canvas>
 
     <div class="container hero-inner">
       <div>
-        <div class="hero-badge"><span class="pulse-dot"></span> Established 1982 &middot; Trusted Global Indenting House</div>
+        <div class="hero-badge">Established 1982 &middot; Trusted Global Indenting House</div>
         <h1>
-          We <span class="accent">connect<svg viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M4 14 C 80 4, 220 4, 296 12" /></svg></span> buyers &amp; suppliers of<br />
+          We <span class="accent">connect</span> buyers &amp; suppliers of<br />
           <span class="rotator"><span class="show">recycled textiles</span><span>raw wool</span><span>synthetic fibres</span></span>
           worldwide.
         </h1>
@@ -95,23 +94,17 @@
       </div>
 
       <div class="hero-visual">
-        <div class="orbit-wrap">
-          <div class="orbit-ring"></div>
-          <div class="orbit-ring inner"></div>
-          <div class="orbit-core">
-            <svg style="animation: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
-          </div>
-          <div class="orbit-node">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
-            <span class="node-lbl">Used Clothes</span>
-          </div>
-          <div class="orbit-node">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3c-2.5 2.5-2.5 15.5 0 18M12 3c2.5 2.5 2.5 15.5 0 18M3.5 9h17M3.5 15h17"/></svg>
-            <span class="node-lbl">Raw Wool</span>
-          </div>
-          <div class="orbit-node">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c4-1 6-3 7-7 1 4 3 6 7 7"/><path d="M12 13V4"/><path d="M8 6l4-3 4 3"/></svg>
-            <span class="node-lbl">Synthetic Fibres</span>
+        <div class="hero-plate">
+          <div class="hero-plate-inner">
+            <div class="plate-caps">Naath Industries Pvt. Ltd.</div>
+            <div class="plate-year">MCMLXXXII</div>
+            <div class="plate-sub">Indenting House &middot; India</div>
+            <div class="plate-rule"></div>
+            <div class="plate-list">
+              <span>Recycled Textiles <i>I</i></span>
+              <span>Raw Wool &amp; Wool Wastes <i>II</i></span>
+              <span>Synthetic Fibre Wastes <i>III</i></span>
+            </div>
           </div>
         </div>
       </div>
@@ -165,27 +158,27 @@
         <svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Naath connects suppliers and buyers in a continuous trade loop">
           <defs>
             <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#0b3d2e"/>
+              <stop offset="0" stop-color="#2f6b4f"/><stop offset="1" stop-color="#0f3a2c"/>
             </linearGradient>
           </defs>
-          <circle cx="260" cy="260" r="205" fill="none" stroke="#0b3d2e" stroke-opacity="0.08" stroke-width="46"/>
+          <circle cx="260" cy="260" r="205" fill="none" stroke="#17201b" stroke-opacity="0.06" stroke-width="46"/>
           <circle class="flow-path" cx="260" cy="260" r="205"/>
           <g>
             <circle cx="260" cy="55" r="46" fill="url(#cg)"/>
-            <text x="260" y="60" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Inter, sans-serif">SUPPLIERS</text>
+            <text x="260" y="60" text-anchor="middle" fill="#fff" font-size="11" font-weight="500" letter-spacing="1.5" font-family="Cinzel, serif">SUPPLIERS</text>
           </g>
           <g>
             <circle cx="438" cy="362" r="46" fill="url(#cg)"/>
-            <text x="438" y="367" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Inter, sans-serif">BUYERS</text>
+            <text x="438" y="367" text-anchor="middle" fill="#fff" font-size="11" font-weight="500" letter-spacing="1.5" font-family="Cinzel, serif">BUYERS</text>
           </g>
           <g>
             <circle cx="82" cy="362" r="46" fill="url(#cg)"/>
-            <text x="82" y="367" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="Inter, sans-serif">RENEWAL</text>
+            <text x="82" y="367" text-anchor="middle" fill="#fff" font-size="11" font-weight="500" letter-spacing="1.5" font-family="Cinzel, serif">RENEWAL</text>
           </g>
           <g transform="translate(260 260)">
-            <circle r="86" fill="#faf7f0" stroke="#10b981" stroke-opacity="0.35" stroke-width="1.5"/>
-            <text y="-8" text-anchor="middle" font-family="Fraunces, serif" font-size="26" font-weight="700" fill="#0b3d2e">Naath</text>
-            <text y="18" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" letter-spacing="2" fill="#1a7a4f">SINCE 1982</text>
+            <circle r="86" fill="#f5f0e6" stroke="#b8965a" stroke-opacity="0.8" stroke-width="1"/>
+            <text y="-8" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="30" font-weight="500" fill="#0f3a2c">Naath</text>
+            <text y="18" text-anchor="middle" font-family="Cinzel, serif" font-size="10" letter-spacing="3" fill="#8a6f4d">SINCE 1982</text>
           </g>
         </svg>
         <div class="photo-frame" style="margin-top: 28px;">

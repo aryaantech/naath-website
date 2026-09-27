@@ -59,7 +59,8 @@
     const start = performance.now();
     const step = (now) => {
       const p = Math.min((now - start) / duration, 1);
-      el.firstChild.textContent = Math.round(target * easeOut(p)).toLocaleString();
+      const value = Math.round(target * easeOut(p));
+      el.firstChild.textContent = target >= 1900 && target <= 2100 ? String(value) : value.toLocaleString();
       if (p < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
