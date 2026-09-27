@@ -100,32 +100,37 @@
     }, 2800);
   }
 
-  /* ---------- World map tooltip ---------- */
+  /* ---------- World map (loads SVG, hover tooltip) ---------- */
   const worldMap = document.querySelector(".world-map");
+  const mapHolder = document.querySelector(".world-map-holder");
   const mapTooltip = document.getElementById("mapTooltip");
-  if (worldMap && mapTooltip) {
-    const showTooltip = (target, clientX, clientY) => {
-      const label = target.getAttribute("data-tooltip");
-      if (!label) return;
+  if (worldMap && mapHolder && mapTooltip) {
+    const showTooltip = (label, clientX, clientY) => {
       const wrapRect = worldMap.getBoundingClientRect();
       mapTooltip.textContent = label;
       mapTooltip.classList.add("show");
       const tw = mapTooltip.offsetWidth;
       let x = clientX - wrapRect.left - tw / 2;
-      let y = clientY - wrapRect.top - 46;
       x = Math.max(8, Math.min(x, wrapRect.width - tw - 8));
       mapTooltip.style.left = x + "px";
-      mapTooltip.style.top = y + "px";
+      mapTooltip.style.top = clientY - wrapRect.top - 48 + "px";
     };
-    worldMap.querySelectorAll("[data-tooltip]").forEach((el) => {
-      el.addEventListener("mouseenter", (e) => showTooltip(el, e.clientX, e.clientY));
-      el.addEventListener("mousemove", (e) => showTooltip(el, e.clientX, e.clientY));
-      el.addEventListener("mouseleave", () => mapTooltip.classList.remove("show"));
-      el.addEventListener("click", (e) => {
-        e.stopPropagation();
-        showTooltip(el, e.clientX, e.clientY);
-      });
-    });
+    fetch(mapHolder.dataset.src)
+      .then((r) => r.text())
+      .then((svg) => {
+        mapHolder.innerHTML = svg;
+        mapHolder.querySelectorAll(".c").forEach((c) => {
+          const name = c.getAttribute("data-name");
+          c.addEventListener("mouseenter", (e) => showTooltip(name, e.clientX, e.clientY));
+          c.addEventListener("mousemove", (e) => showTooltip(name, e.clientX, e.clientY));
+          c.addEventListener("mouseleave", () => mapTooltip.classList.remove("show"));
+          c.addEventListener("click", (e) => {
+            e.stopPropagation();
+            showTooltip(name, e.clientX, e.clientY);
+          });
+        });
+      })
+      .catch(() => {});
     document.addEventListener("click", () => mapTooltip.classList.remove("show"));
   }
 
