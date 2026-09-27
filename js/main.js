@@ -27,6 +27,16 @@
     );
   }
 
+  /* ---------- Key Products dropdown (mobile tap) ---------- */
+  document.querySelectorAll(".nav-dropdown-toggle").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        btn.closest(".nav-dropdown").classList.toggle("open");
+      }
+    });
+  });
+
   /* ---------- Scroll reveal ---------- */
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -88,6 +98,35 @@
       w = (w + 1) % words.length;
       words[w].classList.add("show");
     }, 2800);
+  }
+
+  /* ---------- World map tooltip ---------- */
+  const worldMap = document.querySelector(".world-map");
+  const mapTooltip = document.getElementById("mapTooltip");
+  if (worldMap && mapTooltip) {
+    const showTooltip = (target, clientX, clientY) => {
+      const label = target.getAttribute("data-tooltip");
+      if (!label) return;
+      const wrapRect = worldMap.getBoundingClientRect();
+      mapTooltip.textContent = label;
+      mapTooltip.classList.add("show");
+      const tw = mapTooltip.offsetWidth;
+      let x = clientX - wrapRect.left - tw / 2;
+      let y = clientY - wrapRect.top - 46;
+      x = Math.max(8, Math.min(x, wrapRect.width - tw - 8));
+      mapTooltip.style.left = x + "px";
+      mapTooltip.style.top = y + "px";
+    };
+    worldMap.querySelectorAll("[data-tooltip]").forEach((el) => {
+      el.addEventListener("mouseenter", (e) => showTooltip(el, e.clientX, e.clientY));
+      el.addEventListener("mousemove", (e) => showTooltip(el, e.clientX, e.clientY));
+      el.addEventListener("mouseleave", () => mapTooltip.classList.remove("show"));
+      el.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showTooltip(el, e.clientX, e.clientY);
+      });
+    });
+    document.addEventListener("click", () => mapTooltip.classList.remove("show"));
   }
 
   /* ---------- Floating particles (leaves / fibres) ---------- */

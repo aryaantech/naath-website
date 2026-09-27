@@ -1,0 +1,20 @@
+# Naath Industries Pvt. Ltd.
+
+> Naath Industries Pvt. Ltd. is an indenting house established in 1982, based in India. We connect Indian buyers with reputed suppliers around the world — we do not manufacture or recycle material ourselves, we broker and indent the trade between global suppliers and Indian importers.
+
+## What we trade
+- Used clothing and mixed rags for the textile recycling industry (recovered garments, sorted and baled at origin, for shoddy yarns, blankets, wipers and regenerated fabric)
+- Raw wool and wool wastes (greasy and scoured wool, noils, laps and hard wastes) for Indian spinners and woollen mills
+- Synthetic fibre wastes (acrylic and other synthetic wastes) for regeneration into new yarns
+
+## Who we serve
+Indian buyers (spinners, mills, recyclers) sourcing from reputed global suppliers via container shipment / import trade. We represent suppliers and match them with buyers, handling introductions, negotiation and follow-through.
+
+## Key facts
+- Founded: 1982
+- Type: Indenting house / import-export trade intermediary (not a manufacturer or recycler)
+- Location: India
+- Pages: Home (/), Profile (/profile.html), Textile Recycling (/textile-recycling.html), Raw Wool & Wool Wastes (/raw-wool.html), Synthetic Fibre Wastes (/synthetic-fibre.html), Enquiry (/enquiry.html), Contact (/contact.html)
+
+## Contact
+See /contact.html for enquiry details.
