@@ -205,6 +205,12 @@
   /* ---------- Enquiry form (mailto handoff) ---------- */
   const form = document.getElementById("enquiryForm");
   if (form) {
+    // product pages link here as enquiry.html?product=Wools etc.
+    const preset = new URLSearchParams(window.location.search).get("product");
+    const productSelect = form.querySelector('[name="product"]');
+    if (preset && productSelect && [...productSelect.options].some((o) => o.value === preset)) {
+      productSelect.value = preset;
+    }
     form.addEventListener("submit", (ev) => {
       ev.preventDefault();
       const data = new FormData(form);

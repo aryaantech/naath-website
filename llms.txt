@@ -2,10 +2,11 @@
 
 > Naath Industries Pvt. Ltd. is an indenting house established in 1982, based in India. We connect Indian buyers with reputed suppliers around the world — we do not manufacture or recycle material ourselves, we broker and indent the trade between global suppliers and Indian importers.
 
-## What we trade
-- Used clothing and mixed rags for the textile recycling industry (recovered garments, sorted and baled at origin, for shoddy yarns, blankets, wipers and regenerated fabric)
-- Raw wool and wool wastes (greasy and scoured wool, noils, laps and hard wastes) for Indian spinners and woollen mills
-- Synthetic fibre wastes (acrylic and other synthetic wastes) for regeneration into new yarns
+## What we trade (four product sectors)
+- Wools (/raw-wool.html): carpet grade raw wool, greasy raw wool, scoured raw wool, tannery raw wool, British raw wool, New Zealand raw wool, wool waste/noils, and raw wool above 26 microns / semi merino
+- Recycling (/textile-recycling.html): used clothing and textiles mutilated at origin for recycling — mutilated rags, mutilated synthetic waste, mutilated cotton and denim waste, mutilated acrylic waste, and mutilated sweaters
+- Industrial Wipers (/industrial-wipers.html): wiping cloths cut from recovered textiles
+- Mixed Rags (/mixed-rags.html): assorted recovered textiles of mixed fibres and colours, graded and baled for recycling
 
 ## Who we serve
 Indian buyers (spinners, mills, recyclers) sourcing from reputed global suppliers via container shipment / import trade. We represent suppliers and match them with buyers, handling introductions, negotiation and follow-through.
@@ -14,7 +15,8 @@ Indian buyers (spinners, mills, recyclers) sourcing from reputed global supplier
 - Founded: 1982
 - Type: Indenting house / import-export trade intermediary (not a manufacturer or recycler)
 - Location: India
-- Pages: Home (/), Profile (/profile.html), Textile Recycling (/textile-recycling.html), Raw Wool & Wool Wastes (/raw-wool.html), Synthetic Fibre Wastes (/synthetic-fibre.html), Enquiry (/enquiry.html), Contact (/contact.html)
+- Leadership: Vilas Nath (Founder), Reshma Nath (Director), Shivas Nath (Director) — see /team.html
+- Pages: Home (/), Profile (/profile.html), Our Team (/team.html), Wools (/raw-wool.html), Recycling (/textile-recycling.html), Industrial Wipers (/industrial-wipers.html), Mixed Rags (/mixed-rags.html), Enquiry (/enquiry.html), Contact (/contact.html)
 
 ## Contact
 See /contact.html for enquiry details.
