@@ -1,10 +1,10 @@
 # Naath Industries Pvt. Ltd.
 
-> Naath Industries Pvt. Ltd. is an indenting house established in 1982, based in India. We connect Indian buyers with reputed suppliers around the world — we do not manufacture or recycle material ourselves, we broker and indent the trade between global suppliers and Indian importers.
+> Naath Industries Pvt. Ltd. is an indenting house established in 1982, based in India. We connect Indian buyers with reputed suppliers around the world. We do not manufacture or recycle material ourselves, we broker and indent the trade between global suppliers and Indian importers.
 
 ## What we trade (four product sectors)
 - Wools (/raw-wool.html): carpet grade raw wool, greasy raw wool, scoured raw wool, tannery raw wool, British raw wool, New Zealand raw wool, wool waste/noils, and raw wool above 26 microns / semi merino
-- Recycling (/textile-recycling.html): used clothing and textiles mutilated at origin for recycling — mutilated rags, mutilated synthetic waste, mutilated cotton and denim waste, mutilated acrylic waste, and mutilated sweaters
+- Recycling (/textile-recycling.html): used clothing and textiles mutilated at origin for recycling: mutilated rags, mutilated synthetic waste, mutilated cotton and denim waste, mutilated acrylic waste, and mutilated sweaters
 - Industrial Wipers (/industrial-wipers.html): wiping cloths cut from recovered textiles
 - Mixed Rags (/mixed-rags.html): assorted recovered textiles of mixed fibres and colours, graded and baled for recycling
 
@@ -15,7 +15,7 @@ Indian buyers (spinners, mills, recyclers) sourcing from reputed global supplier
 - Founded: 1982
 - Type: Indenting house / import-export trade intermediary (not a manufacturer or recycler)
 - Location: India
-- Leadership: Vilas Nath (Founder), Reshma Nath (Director), Shivas Nath (Director) — see /team.html
+- Leadership: Vilas Nath (Founder), Reshma Nath (Director), Shivas Nath (Director); see /team.html
 - Pages: Home (/), About Us (/profile.html), Our Team (/team.html), Wools (/raw-wool.html), Recycling (/textile-recycling.html), Industrial Wipers (/industrial-wipers.html), Mixed Rags (/mixed-rags.html), Enquiry (/enquiry.html), Contact (/contact.html)
 
 ## Contact

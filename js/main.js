@@ -1,4 +1,4 @@
-/* Naath Industries — interactions & animations */
+/* Naath Industries: interactions & animations */
 (function () {
   "use strict";
 
@@ -263,7 +263,7 @@
       ev.preventDefault();
       const data = new FormData(form);
       const subject = encodeURIComponent(
-        "Enquiry — " + (data.get("product") || "General") + " — " + (data.get("company") || data.get("name"))
+        "Enquiry: " + (data.get("product") || "General") + " | " + (data.get("company") || data.get("name"))
       );
       const lines = [];
       for (const [k, v] of data.entries()) {
