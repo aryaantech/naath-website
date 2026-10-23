@@ -100,6 +100,54 @@
     }, 2800);
   }
 
+  /* ---------- "More from this department" carousel ---------- */
+  document.querySelectorAll(".carousel").forEach((carousel) => {
+    const track = carousel.querySelector(".carousel-track");
+    const cards = [...track.children];
+    const dotsWrap = carousel.querySelector(".carousel-dots");
+    const visible = () => Math.max(1, Math.round(track.clientWidth / cards[0].offsetWidth));
+    const stops = () => Math.max(1, cards.length - visible() + 1);
+    let current = 0;
+
+    const renderDots = () => {
+      dotsWrap.innerHTML = "";
+      if (stops() < 2) return;
+      for (let i = 0; i < stops(); i++) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.addEventListener("click", () => goTo(i));
+        dotsWrap.appendChild(dot);
+      }
+      markDot();
+    };
+    const markDot = () =>
+      [...dotsWrap.children].forEach((d, i) => d.classList.toggle("active", i === current));
+    const goTo = (i) => {
+      current = i;
+      track.scrollTo({ left: cards[i].offsetLeft - track.offsetLeft - 2 });
+      markDot();
+    };
+
+    track.addEventListener("scroll", () => {
+      const step = cards[1] ? cards[1].offsetLeft - cards[0].offsetLeft : 1;
+      const i = Math.min(stops() - 1, Math.round(track.scrollLeft / step));
+      if (i !== current) { current = i; markDot(); }
+    }, { passive: true });
+    window.addEventListener("resize", renderDots);
+    renderDots();
+
+    const delay = parseInt(carousel.dataset.autoplay, 10);
+    if (delay && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      let paused = false;
+      carousel.addEventListener("mouseenter", () => (paused = true));
+      carousel.addEventListener("mouseleave", () => (paused = false));
+      carousel.addEventListener("touchstart", () => (paused = true), { passive: true });
+      setInterval(() => {
+        if (!paused && stops() > 1) goTo((current + 1) % stops());
+      }, delay);
+    }
+  });
+
   /* ---------- World map (loads SVG, hover tooltip) ---------- */
   const worldMap = document.querySelector(".world-map");
   const mapHolder = document.querySelector(".world-map-holder");
