@@ -16,7 +16,7 @@ Indian buyers (spinners, mills, recyclers) sourcing from reputed global supplier
 - Type: Indenting house / import-export trade intermediary (not a manufacturer or recycler)
 - Location: India
 - Leadership: Vilas Nath (Founder), Reshma Nath (Director), Shivas Nath (Director) — see /team.html
-- Pages: Home (/), Profile (/profile.html), Our Team (/team.html), Wools (/raw-wool.html), Recycling (/textile-recycling.html), Industrial Wipers (/industrial-wipers.html), Mixed Rags (/mixed-rags.html), Enquiry (/enquiry.html), Contact (/contact.html)
+- Pages: Home (/), About Us (/profile.html), Our Team (/team.html), Wools (/raw-wool.html), Recycling (/textile-recycling.html), Industrial Wipers (/industrial-wipers.html), Mixed Rags (/mixed-rags.html), Enquiry (/enquiry.html), Contact (/contact.html)
 
 ## Contact
 See /contact.html for enquiry details.
