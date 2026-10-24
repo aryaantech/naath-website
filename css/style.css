@@ -395,6 +395,11 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
     linear-gradient(rgba(5, 32, 26, 0.74), rgba(5, 32, 26, 0.86)),
     url("../images/hero-3.jpg") center / cover no-repeat;
 }
+.scene-4 {
+  background:
+    linear-gradient(rgba(6, 37, 27, 0.7), rgba(6, 37, 27, 0.84)),
+    url("../images/hero-4.jpg") center / cover no-repeat;
+}
 
 /* animated texture: drifting threads */
 .hero::before {
