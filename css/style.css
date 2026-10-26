@@ -778,6 +778,20 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
   max-width: 60ch;
   font-size: 1.08rem;
 }
+/* faint photo art pinned to the right edge (Wools pages: two lambs) */
+.page-hero .hero-art {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 88%;
+  max-height: 400px;
+  opacity: 0.24;
+  pointer-events: none;
+}
+.page-hero .container { position: relative; z-index: 1; }
+@media (max-width: 600px) {
+  .page-hero .hero-art { height: 70%; opacity: 0.16; }
+}
 .page-hero .hero-deco {
   position: absolute;
   right: -40px;
