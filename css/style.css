@@ -320,6 +320,11 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
     display: none;
   }
   .nav-dropdown.open .nav-dropdown-menu { display: flex; }
+  /* a tap focuses the toggle; don't let the desktop hover/focus offset shift the list */
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu { transform: none; }
+  /* the scrolled header's blur would trap the full-screen menu inside the header bar */
+  .nav.open { backdrop-filter: none; -webkit-backdrop-filter: none; }
   .nav-dropdown-menu a { color: var(--cream) !important; font-size: 1.05rem; }
   .nav-dropdown-menu a:hover { background: rgba(250, 247, 240, 0.1); }
 }
