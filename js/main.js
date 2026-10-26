@@ -275,7 +275,7 @@
     }
   }
 
-  /* ---------- Enquiry form (mailto handoff) ---------- */
+  /* ---------- Enquiry form (sent to the inbox in data-email via FormSubmit) ---------- */
   const form = document.getElementById("enquiryForm");
   if (form) {
     // product pages link here as enquiry.html?product=Wools etc.
@@ -284,20 +284,43 @@
     if (preset && productSelect && [...productSelect.options].some((o) => o.value === preset)) {
       productSelect.value = preset;
     }
-    form.addEventListener("submit", (ev) => {
+    const note = document.getElementById("formNote");
+    const success = document.getElementById("formSuccess");
+    const button = form.querySelector('button[type="submit"]');
+    form.addEventListener("submit", async (ev) => {
       ev.preventDefault();
-      const data = new FormData(form);
-      const subject = encodeURIComponent(
-        "Enquiry: " + (data.get("product") || "General") + " | " + (data.get("company") || data.get("name"))
-      );
-      const lines = [];
-      for (const [k, v] of data.entries()) {
-        if (String(v).trim()) lines.push(k.charAt(0).toUpperCase() + k.slice(1) + ": " + v);
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (data._honey) return; // filled by a bot
+      delete data._honey;
+      const payload = {
+        _subject: "New enquiry: " + (data.product || "General") + " | " + (data.company || data.name),
+        _template: "table",
+        _captcha: "false",
+        Name: data.name,
+        Company: data.company,
+        Email: data.email,
+        Phone: data.phone,
+        Product: data.product,
+        Quantity: data.quantity,
+        Requirement: data.message,
+        _replyto: data.email,
+      };
+      button.disabled = true;
+      note.textContent = "Sending your enquiry…";
+      try {
+        const res = await fetch("https://formsubmit.co/ajax/" + form.dataset.email, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || String(out.success) !== "true") throw new Error(out.message || res.status);
+        form.hidden = true;
+        success.hidden = false;
+      } catch (err) {
+        button.disabled = false;
+        note.textContent = "Sorry, your enquiry could not be sent. Please email us at " + form.dataset.email + ".";
       }
-      const body = encodeURIComponent(lines.join("\n"));
-      window.location.href = "mailto:" + (form.dataset.email || "") + "?subject=" + subject + "&body=" + body;
-      const note = document.getElementById("formNote");
-      if (note) note.textContent = "Opening your email client to send the enquiry…";
     });
   }
 })();

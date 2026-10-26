@@ -929,6 +929,10 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
   box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
 }
 .form-field textarea { resize: vertical; min-height: 130px; }
+.form-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-success { text-align: center; padding: 24px 0; }
+.form-success h3 { font-size: 1.6rem; margin-bottom: 10px; }
+.form-success p { color: var(--ink-soft); }
 
 /* ============================================================
    Contact page
