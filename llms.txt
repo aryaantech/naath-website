@@ -1,6 +1,6 @@
 # Naath Industries Pvt. Ltd.
 
-> Naath Industries Pvt. Ltd. is an indenting house established in 1982, based in India. We connect Indian buyers with reputed suppliers around the world. We do not manufacture or recycle material ourselves, we broker and indent the trade between global suppliers and Indian importers.
+> Naath Industries Pvt. Ltd. is a fourth-generation enterprise and indenting house established in 1982, based in India. We connect Indian buyers with reputed suppliers around the world. We do not manufacture or recycle material ourselves, we broker and indent the trade between global suppliers and Indian importers.
 
 ## What we trade (four product sectors)
 - Wools (/raw-wool.html): carpet grade raw wool, greasy raw wool, scoured raw wool, tannery raw wool, British raw wool, New Zealand raw wool, wool waste/noils, and raw wool above 26 microns / semi merino
@@ -13,6 +13,7 @@ Indian buyers (spinners, mills, recyclers) sourcing from reputed global supplier
 
 ## Key facts
 - Founded: 1982
+- Fourth-generation enterprise
 - Type: Indenting house / import-export trade intermediary (not a manufacturer or recycler)
 - Location: India
 - Leadership: Vilas Nath (Founder), Reshma Nath (Director), Shivas Nath (Director); see /team.html

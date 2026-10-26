@@ -152,6 +152,7 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
 .nav.open .brand-logo,
 .footer .brand-logo { background-color: var(--cream); }
 .footer .brand-logo { height: 34px; }
+.nav-home:not(.scrolled) .brand-logo { height: 46px; }
 
 .nav-links {
   display: flex;
@@ -1586,25 +1587,18 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
 
   /* team: leaders as compact rows, heads two across */
   .team-grid { margin-top: 28px; }
-  .team-grid.leaders { gap: 12px; }
-  .team-grid.leaders .person-card {
-    display: grid;
-    grid-template-columns: 84px 1fr;
-    column-gap: 16px;
-    align-items: center;
-    padding: 12px;
-    text-align: left;
-  }
-  .team-grid.leaders .person-photo { grid-row: span 3; aspect-ratio: 1; margin: 0; }
-  .person-photo span, .person-card.lead .person-photo span { font-size: 1.6rem; }
-  .person-card.lead h3 { font-size: 1.2rem; }
-  .team-grid.leaders .person-role { margin-top: 2px; }
-  .team-grid.leaders .person-card p { margin: 6px 0 0; font-size: 0.85rem; }
+  .team-grid.leaders { grid-template-columns: 1fr; gap: 16px; }
+  .team-grid.leaders .person-card { padding: 12px 12px 22px; }
+  .team-grid.leaders .person-photo { aspect-ratio: 4 / 3; margin-bottom: 16px; }
+  .person-card.lead .person-photo span { font-size: 3rem; }
+  .person-card.lead h3 { font-size: 1.45rem; }
+  .team-grid.leaders .person-card p { font-size: 0.9rem; }
   .team-grid.heads { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .team-grid.heads .person-card { padding: 10px 10px 16px; }
-  .team-grid.heads .person-photo { margin-bottom: 12px; }
-  .team-grid.heads .person-card h3 { font-size: 1.05rem; }
-  .person-role { font-size: 0.66rem; letter-spacing: 0.1em; }
+  .team-grid.heads .person-card { padding: 16px 10px 16px; }
+  .team-grid.heads .person-photo { width: 72px; aspect-ratio: 1; margin: 0 auto 12px; border-radius: 50%; }
+  .team-grid.heads .person-card h3 { font-size: 1rem; }
+  .person-role { font-size: 0.64rem; letter-spacing: 0.08em; }
+  .nav-home:not(.scrolled) .brand-logo { height: 36px; }
 
   /* about / contact */
   .legacy-grid { gap: 20px; }
