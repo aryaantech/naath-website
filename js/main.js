@@ -148,6 +148,31 @@
     }
   });
 
+  /* ---------- Team bios: "Read more" when longer than 4 lines ---------- */
+  const bios = document.querySelectorAll(".person-bio");
+  const fitBios = () =>
+    bios.forEach((bio) => {
+      let btn = bio.nextElementSibling;
+      if (!btn || !btn.classList.contains("read-more")) {
+        btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "read-more";
+        btn.addEventListener("click", () => {
+          const open = bio.classList.toggle("expanded");
+          btn.textContent = open ? "Read less" : "Read more";
+        });
+        bio.after(btn);
+      }
+      const clipped = !bio.classList.contains("expanded") && bio.scrollHeight > bio.clientHeight + 1;
+      btn.hidden = !clipped && !bio.classList.contains("expanded");
+      if (!bio.classList.contains("expanded")) btn.textContent = "Read more";
+    });
+  if (bios.length) {
+    fitBios();
+    window.addEventListener("resize", fitBios);
+    if (document.fonts) document.fonts.ready.then(fitBios);
+  }
+
   /* ---------- World map (loads SVG, hover tooltip) ---------- */
   const worldMap = document.querySelector(".world-map");
   const mapHolder = document.querySelector(".world-map-holder");

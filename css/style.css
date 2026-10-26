@@ -1463,6 +1463,21 @@ img.person-photo { display: block; object-position: 50% 0; }
   color: var(--gold-deep);
 }
 .person-card p { margin: 12px auto 0; max-width: 34ch; font-size: 0.93rem; color: var(--ink-soft); }
+/* long bios show 4 lines; main.js adds a Read more toggle when they overflow */
+.person-bio {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+.person-bio.expanded { display: block; -webkit-line-clamp: unset; }
+.read-more {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+}
+.read-more:hover { color: var(--green-900); }
 
 /* ============================================================
    "More from this department" carousel (grade pages)
