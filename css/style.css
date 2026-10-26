@@ -734,6 +734,19 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
   margin-bottom: 16px;
 }
 .cta-band p { color: rgba(250, 247, 240, 0.8); max-width: 56ch; margin: 0 auto 36px; }
+/* faint photo art at the band's right edge (wool pages: close-up lamb) */
+.cta-band .cta-art {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  opacity: 0.16;
+  pointer-events: none;
+}
+.cta-band > h2, .cta-band > p, .cta-band > .btn { position: relative; z-index: 1; }
+@media (max-width: 600px) {
+  .cta-band .cta-art { height: 85%; opacity: 0.12; }
+}
 .cta-band .recycle-bg {
   position: absolute;
   right: -60px; bottom: -80px;
