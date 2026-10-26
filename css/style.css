@@ -1443,8 +1443,9 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
   background: radial-gradient(circle at 30% 25%, var(--green-600), var(--green-900) 70%);
   color: rgba(250, 247, 240, 0.85);
 }
-.team-grid.heads .person-photo { aspect-ratio: 1; }
-img.person-photo { display: block; object-position: 50% 18%; }
+.team-grid.heads .person-photo { aspect-ratio: 4 / 5; }
+/* portraits: always anchor to the top so the head is never cropped */
+img.person-photo { display: block; object-position: 50% 0; }
 .person-photo span {
   font-family: var(--font-display);
   font-size: 3.6rem;
@@ -1595,8 +1596,8 @@ img.person-photo { display: block; object-position: 50% 18%; }
   .person-card.lead h3 { font-size: 1.45rem; }
   .team-grid.leaders .person-card p { font-size: 0.9rem; }
   .team-grid.heads { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .team-grid.heads .person-card { padding: 16px 10px 16px; }
-  .team-grid.heads .person-photo { width: 72px; aspect-ratio: 1; margin: 0 auto 12px; border-radius: 50%; }
+  .team-grid.heads .person-card { padding: 8px 8px 14px; }
+  .team-grid.heads .person-photo { width: 100%; aspect-ratio: 1; margin: 0 0 12px; }
   .team-grid.heads .person-card h3 { font-size: 1rem; }
   .person-role { font-size: 0.64rem; letter-spacing: 0.08em; }
   .nav-home:not(.scrolled) .brand-logo { height: 36px; }
