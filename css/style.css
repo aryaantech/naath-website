@@ -1461,12 +1461,14 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
   padding: 16px 16px 26px;
   border-radius: var(--radius);
   background: var(--white);
-  border: 1px solid rgba(11, 61, 46, 0.08);
+  border: 1px solid rgba(212, 169, 78, 0.55);
+  outline: 1px solid rgba(212, 169, 78, 0.25);
+  outline-offset: -7px;
   box-shadow: 0 6px 24px -10px rgba(6, 37, 27, 0.12);
   text-align: center;
   transition: transform 0.4s var(--ease-out), box-shadow 0.4s;
 }
-.person-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.person-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); outline-color: rgba(212, 169, 78, 0.6); }
 .person-photo {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -1647,7 +1649,7 @@ img.person-photo { display: block; object-position: 50% 0; }
   .person-card.lead h3 { font-size: 1.45rem; }
   .team-grid.leaders .person-card p { font-size: 0.9rem; }
   .team-grid.heads { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .team-grid.heads .person-card { padding: 8px 8px 14px; }
+  .team-grid.heads .person-card { padding: 8px 8px 14px; outline-offset: -4px; }
   .team-grid.heads .person-photo { width: 100%; aspect-ratio: 1; margin: 0 0 12px; }
   .team-grid.heads .person-card h3 { font-size: 1rem; }
   .person-role { font-size: 0.64rem; letter-spacing: 0.08em; }
