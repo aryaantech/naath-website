@@ -301,7 +301,6 @@
         Email: data.email,
         Phone: data.phone,
         Product: data.product,
-        Quantity: data.quantity,
         Requirement: data.message,
         _replyto: data.email,
       };
