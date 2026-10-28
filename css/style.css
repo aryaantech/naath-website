@@ -20,8 +20,8 @@
   --gold-deep: #a97c2a;
   --line: rgba(16, 35, 28, 0.09);
 
-  --font-display: "EB Garamond", Garamond, Georgia, serif;
-  --font-body: "Mulish", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --radius: 20px;
   --radius-sm: 12px;
