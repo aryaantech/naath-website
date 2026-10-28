@@ -1649,7 +1649,7 @@ img.person-photo { display: block; object-position: 50% 0; }
   .team-grid { margin-top: 28px; }
   .team-grid.leaders { grid-template-columns: 1fr; gap: 16px; }
   .team-grid.leaders .person-card { padding: 12px 12px 22px; }
-  .team-grid.leaders .person-photo { width: 72%; aspect-ratio: 4 / 5; margin: 6px auto 16px; }
+  .team-grid.leaders .person-photo { width: 62%; aspect-ratio: 1; margin: 6px auto 14px; }
   .person-card.lead .person-photo span { font-size: 3rem; }
   .person-card.lead h3 { font-size: 1.45rem; }
   .team-grid.leaders .person-card p { font-size: 0.9rem; }
