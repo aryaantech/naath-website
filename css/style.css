@@ -78,13 +78,6 @@ h1, h2, h3, .display {
   color: var(--gold-deep);
   margin-bottom: 18px;
 }
-.eyebrow::before {
-  content: "";
-  width: 28px;
-  height: 1px;
-  background: var(--gold);
-  border-radius: 2px;
-}
 
 .section-title {
   font-size: clamp(2rem, 4.2vw, 3.1rem);
@@ -857,9 +850,10 @@ section { padding: clamp(72px, 10vw, 130px) 0; position: relative; }
 .check-list li strong { color: var(--ink); }
 .check-list .check {
   flex: none;
-  width: 18px; height: 1px;
-  margin-top: 0.8em;
-  background: var(--gold-deep);
+  width: 6px; height: 6px;
+  margin-top: 0.62em;
+  border-radius: 50%;
+  background: var(--gold);
 }
 
 .info-cards {
