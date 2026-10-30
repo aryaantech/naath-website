@@ -1795,3 +1795,6 @@ img.person-photo { display: block; object-position: 50% 0; }
   .range-card.range-card-more { display: flex; }
   .similar-note { margin-top: 14px; }
 }
+@media (max-width: 900px) {
+  .nav-dropdown-menu a.mega-head.active { background: transparent; color: var(--gold) !important; }
+}
