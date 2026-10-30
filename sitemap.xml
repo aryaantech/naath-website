@@ -88,4 +88,24 @@
     <loc>https://naath.in/contact.html</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://naath.in/wipers-tshirt-knit.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naath.in/wipers-towel-terry.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naath.in/wipers-sweatshirt-fleece.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naath.in/wipers-bedsheet-cotton.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naath.in/wipers-flannel.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
