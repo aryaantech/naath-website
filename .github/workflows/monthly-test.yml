@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check the live site
-        run: curl -fsS -o /dev/null https://naaths.com/
+        run: curl -fsS -o /dev/null https://naath-website.blackops27879.workers.dev/
 
       - name: Send test enquiry
         run: |
           curl -fsS -X POST https://formsubmit.co/ajax/aryaan@naath.in \
             -H "Content-Type: application/json" \
             -H "Accept: application/json" \
-            -H "Origin: https://naaths.com" \
-            -H "Referer: https://naaths.com/enquiry" \
+            -H "Origin: https://naath-website.blackops27879.workers.dev" \
+            -H "Referer: https://naath-website.blackops27879.workers.dev/enquiry" \
             -d '{"_subject":"TEST: Monthly website check","name":"TEST (automatic)","message":"Automatic monthly test to confirm the website and enquiry form are working. No action needed."}' \
             | tee out.json
           grep -q '"success": *"\?true' out.json
