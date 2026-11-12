@@ -108,4 +108,24 @@
     <loc>https://naath.in/wipers-flannel.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://naath.in/mixed-unsorted-clothing.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naath.in/mixed-institutional-original.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naath.in/mixed-household-textiles.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naath.in/mixed-cotton-rags.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://naath.in/mixed-textile-waste.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
