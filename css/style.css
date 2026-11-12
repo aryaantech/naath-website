@@ -1848,3 +1848,7 @@ img.person-photo { display: block; object-position: 50% 0; }
 @media (max-width: 900px) {
   .nav-dropdown-menu a.mega-head.active { background: transparent; color: var(--gold) !important; }
 }
+
+/* Mega menu: four columns */
+.mega-menu { width: min(1120px, 96vw); }
+@media (max-width: 900px) { .mega-menu { width: auto; } }
