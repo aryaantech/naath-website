@@ -1852,3 +1852,9 @@ img.person-photo { display: block; object-position: 50% 0; }
 /* Mega menu: four columns */
 .mega-menu { width: min(1120px, 96vw); }
 @media (max-width: 900px) { .mega-menu { width: auto; } }
+
+/* Page header breadcrumb wraps as normal text, and the phone menu spacing is even */
+.page-hero .crumb { display: block; line-height: 1.8; }
+@media (max-width: 900px) {
+  .mega-menu { padding-top: 28px; }
+}
