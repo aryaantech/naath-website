@@ -2131,3 +2131,21 @@ img.person-photo { display: block; object-position: 50% 0; }
   .visit-actions .btn, .visit-actions .text-link { justify-content: center; }
   .quick-main .btn { width: 100%; justify-content: center; }
 }
+
+/* Contact: details first, map straight after */
+.section-reach { padding-bottom: 0; }
+.section-visit { padding-top: 28px; }
+.map-cue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+}
+.map-cue svg { width: 18px; height: 18px; animation: cue-bob 1.6s ease-in-out infinite; }
+.map-cue:hover { color: var(--green-900); }
+@keyframes cue-bob { 50% { transform: translateY(4px); } }
+@media (prefers-reduced-motion: reduce) { .map-cue svg { animation: none; } }
