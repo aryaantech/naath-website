@@ -2070,3 +2070,44 @@ img.person-photo { display: block; object-position: 50% 0; }
   .sending-ring::before { animation-duration: 2.4s; }
   .sending-ring svg { animation: none; }
 }
+
+/* Contact: map beside the details, quick enquiry band below */
+.contact-grid:has(.map-card--side) { align-items: stretch; }
+.map-card--side { display: flex; flex-direction: column; }
+.map-card--side .map-frame { flex: 1; height: auto; min-height: 380px; }
+.map-card--side .map-panel { flex-wrap: wrap; }
+.map-card--side .map-actions { width: 100%; justify-content: space-between; padding-left: 64px; }
+.section-quick { padding-top: 0; }
+.quick-band {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 18px 32px;
+  padding: 28px 34px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border-top: 2px solid var(--gold);
+  box-shadow: var(--shadow-md);
+}
+.quick-text h3 { font-size: 1.35rem; margin-bottom: 4px; }
+.quick-text p { color: var(--ink-soft); font-size: 0.95rem; }
+.quick-points {
+  grid-column: 1 / -1;
+  display: flex; flex-wrap: wrap; gap: 10px 28px;
+  list-style: none; margin: 0; padding: 16px 0 0;
+  border-top: 1px solid rgba(11, 61, 46, 0.08);
+}
+.quick-points li { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--green-900); }
+.quick-points li::before {
+  content: ""; flex: none; width: 16px; height: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a97c2a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+@media (max-width: 900px) {
+  .map-card--side .map-frame { min-height: 300px; }
+  .map-card--side .map-actions { padding-left: 0; }
+}
+@media (max-width: 640px) {
+  .quick-band { grid-template-columns: 1fr; padding: 22px; }
+  .quick-band .btn { justify-content: center; }
+  .quick-points { flex-direction: column; gap: 8px; }
+}
