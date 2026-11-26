@@ -1939,6 +1939,7 @@ img.person-photo { display: block; object-position: 50% 0; }
   transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
 }
 .wz-choice--wide { grid-column: 1 / -1; }
+.wz-choice { padding-right: 48px; }
 .wz-choice:hover { transform: translateY(-2px); border-color: rgba(201, 162, 74, 0.6); box-shadow: var(--shadow-md); }
 .wz-choice input { position: absolute; opacity: 0; pointer-events: none; }
 .wz-icon {
@@ -1998,7 +1999,7 @@ img.person-photo { display: block; object-position: 50% 0; }
   .wz-steps li span { font-size: 0.8rem; }
   .wz-steps li.is-current { font-size: 0.78rem; gap: 8px; }
   .wz-choices { grid-template-columns: 1fr; gap: 10px; }
-  .wz-choice { padding: 14px 16px; }
+  .wz-choice { padding: 14px 44px 14px 16px; }
   .wz-icon { width: 42px; height: 42px; }
   .wz-nav { flex-wrap: wrap; gap: 12px; }
   .wz-note { order: 3; flex-basis: 100%; text-align: center; }
