@@ -266,7 +266,13 @@
   if (wa) {
     const number = (wa.dataset.number || "").replace(/\D/g, "");
     if (number) {
-      wa.href = "https://wa.me/" + number + "?text=" + encodeURIComponent("Hello Naath Industries, I have an enquiry.");
+      // on a product page, name the product in the opening message
+      const onProduct = document.querySelector('a[href*="enquiry.html?product="]') && document.querySelector(".page-hero h1");
+      const product = onProduct ? document.querySelector(".page-hero h1").textContent.trim().replace(/\.$/, "") : "";
+      const message = product
+        ? "Hello Naath Industries, I came across your website and would like to enquire about " + product + ". Please share more details."
+        : "Hello Naath Industries, I came across your website and would like to make an enquiry. Please get in touch.";
+      wa.href = "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
       wa.target = "_blank";
       wa.rel = "noopener";
     } else {
