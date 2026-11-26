@@ -1861,10 +1861,10 @@ img.person-photo { display: block; object-position: 50% 0; }
 
 /* Contact: embedded map */
 .map-link { display: inline-block; margin-top: 6px; font-size: 0.85rem; font-weight: 600; color: var(--gold-deep) !important; }
-.section-map { padding-top: 0; }
+.section-location { padding-top: 0; }
 .map-card {
   position: relative;
-  border-radius: var(--radius-lg, 22px);
+  border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   background: #fff;
