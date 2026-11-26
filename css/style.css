@@ -2158,3 +2158,5 @@ img.person-photo { display: block; object-position: 50% 0; }
 .footer-contact a:hover { color: var(--gold); }
 .footer-contact a.footer-cta { margin-top: 4px; color: var(--gold); font-weight: 600; }
 .footer-contact a.footer-cta:hover { color: var(--cream); }
+@media (min-width: 901px) { .footer-grid { grid-template-columns: 1.3fr 0.8fr 0.9fr 1.3fr; } }
+.footer-contact a { white-space: nowrap; }
