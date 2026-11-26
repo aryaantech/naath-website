@@ -85,50 +85,94 @@
   <section>
     <div class="container" style="max-width: 860px;">
       <div class="form-card reveal">
-        <form id="enquiryForm" data-email="aryaan@naath.in">
+        <form id="enquiryForm" class="wizard" data-email="aryaan@naath.in" novalidate>
           <!-- spam trap: real visitors never see or fill this -->
           <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="f-name">Your Name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Full name" />
-            </div>
-            <div class="form-field">
-              <label for="f-company">Company *</label>
-              <input id="f-company" name="company" type="text" required autocomplete="organization" placeholder="Company name" />
-            </div>
-            <div class="form-field">
-              <label for="f-email">Email *</label>
-              <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" />
-            </div>
-            <div class="form-field">
-              <label for="f-phone">Phone *</label>
-              <input id="f-phone" name="phone" type="tel" required autocomplete="tel" minlength="7" placeholder="+91" />
-            </div>
-            <div class="form-field full">
-              <label for="f-product">Product of Interest</label>
-              <select id="f-product" name="product">
-                <option value="">Select a product…</option>
-                <option>Wools</option>
-                <option>Recycling</option>
-                <option>Industrial Wipers</option>
-                <option>Mixed Rags</option>
-                <option>Similar product / Other</option>
-              </select>
-            </div>
-            <div class="form-field full">
-              <label for="f-msg">Your Requirement</label>
-              <textarea id="f-msg" name="message" placeholder="Grades, specifications, delivery port, timelines…"></textarea>
-            </div>
+
+          <div class="wz-head">
+            <ol class="wz-steps">
+              <li class="is-current"><span>1</span>Product</li>
+              <li><span>2</span>Your details</li>
+              <li><span>3</span>Requirement</li>
+            </ol>
+            <div class="wz-bar"><span></span></div>
           </div>
-          <div style="margin-top: 30px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
-            <button class="btn btn-primary" type="submit">Send Enquiry
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            </button>
-            <span id="formNote" style="font-size: 0.9rem; color: var(--ink-soft);">Our team will reach out to you within 12-24 hours.</span>
+
+          <fieldset class="wz-step" data-step="1">
+            <legend class="wz-title">What are you looking for?</legend>
+            <p class="wz-sub">Pick one to continue, or skip if you're not sure yet.</p>
+            <div class="wz-choices">
+              <label class="wz-choice">
+                <input type="radio" name="product" value="Wools" />
+                <span class="wz-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5a3.2 3.2 0 0 1-1.2-6.2 3.5 3.5 0 0 1 4.9-4.3 4 4 0 0 1 7.3 1.6 3.4 3.4 0 0 1 .5 8.9Z"/><path d="M9 14.6a1.3 1.3 0 1 1 2.2.9M13 14.6a1.3 1.3 0 1 1 2.2.9"/></svg></span>
+                <span class="wz-choice-text"><strong>Wools</strong><small>Raw wool, scoured, noils</small></span>
+              </label>
+              <label class="wz-choice">
+                <input type="radio" name="product" value="Recycling" />
+                <span class="wz-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/><path d="M14.4 13.5a2.5 2.5 0 1 1-1-2"/><path d="M13.4 9.7v1.8h1.8"/></svg></span>
+                <span class="wz-choice-text"><strong>Recycling</strong><small>Mutilated rags and waste</small></span>
+              </label>
+              <label class="wz-choice">
+                <input type="radio" name="product" value="Industrial Wipers" />
+                <span class="wz-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h12v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z"/><path d="M3 14h12M7 10v10"/><path d="M18.5 3s-2.5 3-2.5 4.6a2.5 2.5 0 0 0 5 0C21 6 18.5 3 18.5 3Z"/></svg></span>
+                <span class="wz-choice-text"><strong>Industrial Wipers</strong><small>Graded wiping cloths</small></span>
+              </label>
+              <label class="wz-choice">
+                <input type="radio" name="product" value="Mixed Rags" />
+                <span class="wz-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="15" width="17" height="4.5" rx="1.5"/><rect x="5" y="10.5" width="14" height="4.5" rx="1.5"/><rect x="6.5" y="6" width="11" height="4.5" rx="1.5"/></svg></span>
+                <span class="wz-choice-text"><strong>Mixed Rags</strong><small>Used clothing from the USA</small></span>
+              </label>
+              <label class="wz-choice wz-choice--wide">
+                <input type="radio" name="product" value="Similar product / Other" />
+                <span class="wz-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/><path d="M11 8v6M8 11h6"/></svg></span>
+                <span class="wz-choice-text"><strong>Similar product / Other</strong><small>Tell us what you need and we'll source it</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="wz-step" data-step="2">
+            <legend class="wz-title">How can we reach you?</legend>
+            <p class="wz-sub">Company, email and phone are all we need.</p>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="f-company">Company *</label>
+                <input id="f-company" name="company" type="text" required autocomplete="organization" placeholder="Company name" />
+              </div>
+              <div class="form-field">
+                <label for="f-name">Your Name <em>optional</em></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Full name" />
+              </div>
+              <div class="form-field">
+                <label for="f-email">Email *</label>
+                <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" />
+              </div>
+              <div class="form-field">
+                <label for="f-phone">Phone *</label>
+                <input id="f-phone" name="phone" type="tel" required autocomplete="tel" minlength="7" placeholder="+91" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="wz-step" data-step="3">
+            <legend class="wz-title">Anything we should know?</legend>
+            <p class="wz-sub">Optional: grades, quantities, delivery port or timelines.</p>
+            <div class="form-field">
+              <label for="f-msg" class="sr-only">Your Requirement</label>
+              <textarea id="f-msg" name="message" placeholder="For example: 2 containers of scoured wool, delivery to Kandla in March"></textarea>
+            </div>
+            <p class="wz-summary" id="wzSummary"></p>
+          </fieldset>
+
+          <div class="wz-nav">
+            <button class="wz-back" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Back</button>
+            <span id="formNote" class="wz-note">Our team will reach out to you within 12-24 hours.</span>
+            <button class="wz-skip" type="button">Skip</button>
+            <button class="btn btn-dark wz-next" type="button">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button class="btn btn-primary wz-send" type="submit">Send Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
           </div>
         </form>
         <div class="form-success" id="formSuccess" hidden>
+          <div class="form-success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
           <h3>Thank you for your enquiry.</h3>
           <p>Our team will reach out to you within 12-24 hours.</p>
         </div>

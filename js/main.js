@@ -275,20 +275,82 @@
     }
   }
 
-  /* ---------- Enquiry form (sent to the inbox in data-email via FormSubmit) ---------- */
+  /* ---------- Enquiry form: three steps, sent to the inbox in data-email via FormSubmit ---------- */
   const form = document.getElementById("enquiryForm");
   if (form) {
-    // product pages link here as enquiry.html?product=Wools etc.
-    const preset = new URLSearchParams(window.location.search).get("product");
-    const productSelect = form.querySelector('[name="product"]');
-    if (preset && productSelect && [...productSelect.options].some((o) => o.value === preset)) {
-      productSelect.value = preset;
-    }
+    form.classList.add("is-js");
+    const steps = [...form.querySelectorAll(".wz-step")];
+    const labels = [...form.querySelectorAll(".wz-steps li")];
+    const bar = form.querySelector(".wz-bar span");
+    const back = form.querySelector(".wz-back");
+    const next = form.querySelector(".wz-next");
+    const skip = form.querySelector(".wz-skip");
+    const send = form.querySelector(".wz-send");
     const note = document.getElementById("formNote");
     const success = document.getElementById("formSuccess");
-    const button = form.querySelector('button[type="submit"]');
+    const summary = document.getElementById("wzSummary");
+    let current = 0;
+
+    const show = (i, focus = true) => {
+      current = i;
+      steps.forEach((s, n) => s.classList.toggle("is-active", n === i));
+      labels.forEach((l, n) => {
+        l.classList.toggle("is-current", n === i);
+        l.classList.toggle("is-done", n < i);
+      });
+      bar.style.width = ((i + 1) / steps.length) * 100 + "%";
+      back.hidden = i === 0;
+      skip.hidden = i !== 0;
+      next.hidden = i === 0 || i === steps.length - 1;
+      send.hidden = i !== steps.length - 1;
+      if (i === steps.length - 1) {
+        const d = Object.fromEntries(new FormData(form).entries());
+        summary.textContent = [d.product, d.company, d.email, d.phone].filter(Boolean).join("  ·  ");
+      }
+      if (focus) {
+        const field = steps[i].querySelector("input:not([type=radio]), textarea");
+        if (field && i > 0) setTimeout(() => field.focus({ preventScroll: true }), 250);
+      }
+    };
+
+    // a step is fine to leave when its required fields are filled in correctly
+    const valid = (i) => {
+      for (const f of steps[i].querySelectorAll("[required]")) {
+        if (!f.checkValidity()) {
+          f.reportValidity();
+          return false;
+        }
+      }
+      return true;
+    };
+    const go = (i) => {
+      for (let n = current; n < i; n++) if (!valid(n)) return show(n);
+      show(i);
+    };
+
+    // product pages link here as enquiry.html?product=Wools etc.
+    const preset = new URLSearchParams(window.location.search).get("product");
+    const presetInput = preset && [...form.querySelectorAll('[name="product"]')].find((r) => r.value === preset);
+    if (presetInput) presetInput.checked = true;
+    show(presetInput ? 1 : 0, false);
+
+    form.querySelectorAll('[name="product"]').forEach((r) =>
+      r.addEventListener("change", () => setTimeout(() => show(1), 220))
+    );
+    labels.forEach((l, n) => l.addEventListener("click", () => n < current && show(n)));
+    back.addEventListener("click", () => show(current - 1));
+    skip.addEventListener("click", () => show(1));
+    next.addEventListener("click", () => go(current + 1));
+    form.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && e.target.tagName === "INPUT" && current < steps.length - 1) {
+        e.preventDefault();
+        go(current + 1);
+      }
+    });
+
     form.addEventListener("submit", async (ev) => {
       ev.preventDefault();
+      for (let n = 0; n < steps.length; n++) if (!valid(n)) return show(n);
       const data = Object.fromEntries(new FormData(form).entries());
       if (data._honey) return; // filled by a bot
       delete data._honey;
@@ -304,7 +366,7 @@
         Requirement: data.message,
         _replyto: data.email,
       };
-      button.disabled = true;
+      send.disabled = true;
       note.textContent = "Sending your enquiry…";
       try {
         const res = await fetch("https://formsubmit.co/ajax/" + form.dataset.email, {
@@ -317,7 +379,7 @@
         form.hidden = true;
         success.hidden = false;
       } catch (err) {
-        button.disabled = false;
+        send.disabled = false;
         note.textContent = "Sorry, your enquiry could not be sent. Please email us at " + form.dataset.email + ".";
       }
     });
