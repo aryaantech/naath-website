@@ -2111,3 +2111,9 @@ img.person-photo { display: block; object-position: 50% 0; }
   .quick-band .btn { justify-content: center; }
   .quick-points { flex-direction: column; gap: 8px; }
 }
+.quick-band .btn { grid-column: 2; grid-row: 1; white-space: nowrap; }
+.map-card--side .map-actions { flex-wrap: wrap; justify-content: flex-start; gap: 12px 24px; }
+.map-actions .btn, .map-actions .text-link { white-space: nowrap; }
+@media (max-width: 640px) {
+  .quick-band .btn { grid-column: auto; grid-row: auto; }
+}
