@@ -99,8 +99,8 @@
           </div>
 
           <fieldset class="wz-step" data-step="1">
-            <legend class="wz-title">What are you looking for?</legend>
-            <p class="wz-sub">Pick one to continue, or skip if you're not sure yet.</p>
+            <legend class="wz-title">What are you looking for? <span class="opt-pill">Optional</span></legend>
+            <p class="wz-sub">Pick one to continue, or press Skip if you're not sure yet.</p>
             <div class="wz-choices">
               <label class="wz-choice">
                 <input type="radio" name="product" value="Wools" />
@@ -139,7 +139,7 @@
                 <input id="f-company" name="company" type="text" required autocomplete="organization" placeholder="Company name" />
               </div>
               <div class="form-field">
-                <label for="f-name">Your Name <em>optional</em></label>
+                <label for="f-name">Your Name <span class="opt-pill">Optional</span></label>
                 <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Full name" />
               </div>
               <div class="form-field">
@@ -154,8 +154,8 @@
           </fieldset>
 
           <fieldset class="wz-step" data-step="3">
-            <legend class="wz-title">Anything we should know?</legend>
-            <p class="wz-sub">Optional: grades, quantities, delivery port or timelines.</p>
+            <legend class="wz-title">Anything we should know? <span class="opt-pill">Optional</span></legend>
+            <p class="wz-sub">Grades, quantities, delivery port or timelines. You can leave this blank and send.</p>
             <div class="form-field">
               <label for="f-msg" class="sr-only">Your Requirement</label>
               <textarea id="f-msg" name="message" placeholder="For example: 2 containers of scoured wool, delivery to Kandla in March"></textarea>
@@ -171,9 +171,14 @@
             <button class="btn btn-primary wz-send" type="submit">Send Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
           </div>
         </form>
+        <div class="form-sending" id="formSending" hidden aria-live="polite">
+          <div class="sending-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+          <h3>Sending your enquiry</h3>
+          <p>Just a moment, please don't close this page.</p>
+        </div>
         <div class="form-success" id="formSuccess" hidden>
           <div class="form-success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <h3>Thank you for your enquiry.</h3>
+          <h3>Thank you, your enquiry is received.</h3>
           <p>Our team will reach out to you within 12-24 hours.</p>
         </div>
       </div>

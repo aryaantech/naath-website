@@ -372,22 +372,46 @@
         Requirement: data.message,
         _replyto: data.email,
       };
+      const sending = document.getElementById("formSending");
+      const card = form.closest(".form-card");
       send.disabled = true;
-      note.textContent = "Sending your enquiry…";
-      try {
-        const res = await fetch("https://formsubmit.co/ajax/" + form.dataset.email, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify(payload),
-        });
+      note.textContent = "";
+      sending.hidden = false;
+      card.classList.add("is-sending");
+
+      // keepalive lets the request finish even if the visitor moves on
+      const request = fetch("https://formsubmit.co/ajax/" + form.dataset.email, {
+        method: "POST",
+        keepalive: true,
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      }).then(async (res) => {
         const out = await res.json().catch(() => ({}));
         if (!res.ok || String(out.success) !== "true") throw new Error(out.message || res.status);
-        form.hidden = true;
-        success.hidden = false;
-      } catch (err) {
+      });
+      const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+      const failed = () => {
+        sending.hidden = true;
+        card.classList.remove("is-sending");
+        form.hidden = false;
+        success.hidden = true;
         send.disabled = false;
-        note.textContent = "Sorry, your enquiry could not be sent. Please email us at " + form.dataset.email + ".";
-      }
+        note.innerHTML = 'Sorry, your enquiry could not be sent. Please email <a href="mailto:' + form.dataset.email + '">' + form.dataset.email + "</a> or message us on WhatsApp.";
+      };
+
+      // the mail service can be slow, so thank the visitor after a short wait
+      // and let the request finish in the background
+      const result = await Promise.all([
+        Promise.race([request.then(() => "sent", () => "failed"), wait(2200).then(() => "pending")]),
+        wait(900),
+      ]).then(([r]) => r);
+      if (result === "failed") return failed();
+      sending.hidden = true;
+      card.classList.remove("is-sending");
+      form.hidden = true;
+      success.hidden = false;
+      if (result === "pending") request.catch(failed);
     });
   }
 })();
